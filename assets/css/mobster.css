@@ -40,6 +40,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.25;
+  margin: 0;
 }
 
 h1, .h1 {
@@ -69,6 +70,9 @@ h6, .h6 {
 hr {
   border-color: #E4E1EB;
 }
+.warning{
+  /* width: 500px; */
+}
 
 .no-transform {
   -webkit-transform: none !important;
@@ -89,6 +93,7 @@ hr {
 
 .fs-small {
   font-size: 14px !important;
+  margin: 0;
 }
 
 .fs-normal {
@@ -1249,6 +1254,7 @@ hr {
 .iconic-item {
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: no-wrap;
   padding: 12px 0;
 }
@@ -1256,6 +1262,7 @@ hr {
 .iconic-item .iconic-content {
   margin-left: 12px;
   flex-basis: calc(100% - 100px);
+  
 }
 
 /* List */
@@ -2086,7 +2093,9 @@ hr {
 
 .navbar-nav .nav-link {
   font-weight: 500;
+  scroll-behavior:smooth ;
 }
+
 
 .navbar-expand-lg.navbar-floating.navbar-light {
   background-color: #fff;
@@ -2229,10 +2238,10 @@ hr {
 }
 
 .mobile-preview {
-  width: 100%;
-  max-width: 233px;
+  width: 18em;
+  /* max-width: 300px; */
   height: auto;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .hero-home-1 .mobile-preview {
