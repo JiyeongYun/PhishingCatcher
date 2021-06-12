@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">피싱캐쳐</string>
+    <string name="title_activity_splash">ActivitySplash</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="born_year">출생년도</string>
+    <string name="gender">성별</string>
+    <string name="career">직업</string>
+    <string name="Insert_info">회원등록을 위해 아래 정보를 입력해주세요.</string>
+    <string name="member_register">회원 등록</string>
+    <string name="register">등록하기</string>
+
+    <string name="unknown_number">알 수 없는번호</string>
+    <string name="restrict_number">바로 차단하기</string>
+    <string name="restrict_zero">차단이력 00건</string>
+
+    <string name="friend">지인</string>
+    <string name="parcel">택배</string>
+    <string name="telecom">통신사</string>
+    <string name="insurance">보험</string>
+    <string name="loan">대출</string>
+    <string name="police">경찰</string>
+    <string name="research">리서치</string>
+    <string name="delivery">배달</string>
+    <string name="bank">은행</string>
+    <string name="others">기타</string>
+    <string name="unknown">알수없음</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="network_not_working">네크워크에 연결되어 있지 않습니다.\n\n확인후 다시 실행해주세요.</string>
+
+
+</resources>

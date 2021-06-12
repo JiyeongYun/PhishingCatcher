@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.FragmentMyStatSecond">
+
+    <data>
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:cardUseCompatPadding="true">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미등록 통화유형"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bc_callLog"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparent"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="150dp"
+                android:layout_marginStart="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예시"
+                android:textColor="@color/warning3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="15dp" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/warning_box">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="10dp"
+                    android:text="Yoon님은 주로 지인과 통화했으며\nYoon님과 같은 직업군인 자영업자는\n
+기타에서 전화가 많이 오는 편입니다.\n\nYoon님은 60대 비슷한 연령대 보다\n대출 전화가 많이 오는 편입니다."/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <ImageView
+                android:id="@+id/iv_first_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/first_blue_icon"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_1"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toStartOf="@id/tv_first_icon"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_marginBottom="100dp" />
+
+
+            <TextView
+                android:id="@+id/tv_first_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iv_first_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_first_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_first_icon"
+                app:layout_constraintEnd_toStartOf="@+id/iv_second_icon"
+                android:layout_marginEnd="10dp"
+                android:text="나" />
+
+
+
+            <ImageView
+                android:id="@+id/iv_second_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/second_blue_icon"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toEndOf="@id/tv_first_icon"
+                app:layout_constraintTop_toTopOf="@id/tv_first_icon"
+                app:layout_constraintBottom_toBottomOf="@id/tv_first_icon"
+                app:layout_constraintEnd_toStartOf="@+id/tv_second_icon"/>
+
+            <TextView
+                android:id="@+id/tv_second_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iv_second_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_second_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_second_icon"
+                app:layout_constraintEnd_toStartOf="@+id/iv_third_icon"
+                android:layout_marginEnd="10dp"
+                android:text="20대" />
+
+            <ImageView
+                android:id="@+id/iv_third_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/third_blue_icon"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toEndOf="@id/tv_second_icon"
+                app:layout_constraintTop_toTopOf="@id/tv_second_icon"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second_icon"
+                app:layout_constraintEnd_toStartOf="@+id/tv_third_icon"/>
+
+            <TextView
+                android:id="@+id/tv_third_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iv_third_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_third_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_third_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="대학생" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</layout>

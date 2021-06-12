@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ActivitySignUp">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.goodwiil.goodwillvoice.viewModel.SignUpViewModel" />
+        <variable
+            name="model"
+            type="com.goodwiil.goodwillvoice.model.User" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/layout_top_bar"
+            android:layout_width="match_parent"
+            android:background="@color/colorBlue"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/top_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Insert_info"
+            android:textSize="20sp"
+            android:textColor="@color/colorNormal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
+
+
+
+
+        <Spinner
+            android:id="@+id/sp_year"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.222" />
+
+        <Spinner
+            android:id="@+id/sp_gender"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:entries="@array/성별"
+            app:layout_constraintTop_toBottomOf="@+id/sp_year"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/sp_career"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:entries="@array/직업"
+            app:layout_constraintTop_toBottomOf="@+id/sp_gender"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/sp_level"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:entries="@array/신용등급"
+            app:layout_constraintTop_toBottomOf="@+id/sp_career"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_nick_name"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:hint="별명"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_level" />
+
+        <ImageButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:onClick="@{() -> viewModel.signUpBtnClick(btnSignUp,cl)}"
+            android:src="@drawable/signup_btn"
+            android:text="@string/register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

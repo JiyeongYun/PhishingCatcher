@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:gravity="end"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/tv_number"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@id/tv_number"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="054-260-2222"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_id"
+        app:layout_constraintEnd_toStartOf="@id/tv_type"
+        app:layout_constraintTop_toTopOf="@id/tv_id"/>
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="알수없음"
+        android:gravity="center"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_number"
+        app:layout_constraintEnd_toStartOf="@id/tv_call_time"
+        app:layout_constraintTop_toTopOf="@id/tv_id"/>
+
+    <TextView
+        android:id="@+id/tv_call_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/tv_type"
+        app:layout_constraintTop_toTopOf="@id/tv_id"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/line"
+        app:layout_constraintTop_toBottomOf="@id/tv_id"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

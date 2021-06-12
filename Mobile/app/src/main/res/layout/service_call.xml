@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+        <import type="com.goodwiil.goodwillvoice.util.CallLogDataManager"/>
+        <variable
+            name="viewModel"
+            type="com.goodwiil.goodwillvoice.viewModel.CallViewModel" />
+        <variable
+            name="model"
+            type="com.goodwiil.goodwillvoice.model.IncomingNumber" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/popup_layout_ringing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+
+            <ImageButton
+                android:id="@+id/button"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#00FFFFFF"
+                android:onClick="@{() -> viewModel.backBtnClick(button)}"
+                android:src="@drawable/x"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/iv_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call_proflie"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/button"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNormal"
+                android:textSize="16.7sp"
+                android:text="@string/unknown_number"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+                app:layout_constraintStart_toEndOf="@id/iv_profile"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{CallLogDataManager.convertNumber(model.number)}"
+                android:textColor="@color/colorNormal"
+                android:visibility="gone"
+                android:textSize="25sp"
+                tools:text="010-1234-5678"
+                app:layout_constraintTop_toTopOf="@+id/iv_profile"
+                app:layout_constraintStart_toEndOf="@id/iv_profile"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/tv_restrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNormal"
+                android:textSize="15sp"
+                android:text="@string/restrict_zero"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                android:layout_marginEnd="25dp" />
+
+            <TextView
+                android:id="@+id/tv_who"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16.7sp"
+                android:textColor="@color/colorNormal"
+                android:gravity="center_horizontal"
+                android:text="이 전화는 누구인가요?"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_who">
+
+                <TextView
+                    android:id="@+id/tv_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.friendBtnClick(tvFriend, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/friend" />
+
+                <TextView
+                    android:id="@+id/tv_parcel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.parcelBtnClick(tvParcel, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/parcel" />
+
+                <TextView
+                    android:id="@+id/tv_telecom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.telecomBtnClick(tvTelecom, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/telecom" />
+
+                <TextView
+                    android:id="@+id/tv_insurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.insuranceBtnClick(tvInsurance, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/insurance" />
+
+                <TextView
+                    android:id="@+id/tv_police"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.policeBtnClick(tvPolice, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:text="@string/police" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+                <TextView
+                android:id="@+id/tv_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:onClick="@{()->viewModel.bankBtnClick(tvBank, cl)}"
+                android:textColor="@color/colorNormal"
+                android:textSize="20sp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/bank" />
+
+                <TextView
+                    android:id="@+id/tv_loan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.loanBtnClick(tvBank, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/loan" />
+
+                <TextView
+                    android:id="@+id/tv_research"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.researchBtnClick(tvResearch, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/research" />
+
+                <TextView
+                    android:id="@+id/tv_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.deliveryBtnClick(tvDelivery, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/delivery" />
+
+
+                <TextView
+                    android:id="@+id/tv_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{()->viewModel.othersBtnClick(tvOthers, cl)}"
+                    android:textColor="@color/colorNormal"
+                    android:textSize="20sp"
+                    android:text="@string/others" />
+
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

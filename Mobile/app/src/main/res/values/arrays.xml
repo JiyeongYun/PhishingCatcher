@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="직업">
+        <item>직업</item>
+        <item>학생(초/중/고)</item>
+        <item>대학생</item>
+        <item>대학원생</item>
+        <item>취업준비생</item>
+        <item>전업주부</item>
+        <item>일반 사무직</item>
+        <item>자영업자</item>
+        <item>전문직  종사자</item>
+        <item>공무원/공기업/교사</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="성별">
+        <item>성별</item>
+        <item>남성</item>
+        <item>여성</item>
+    </string-array>
+
+    <string-array name="level">
+        <item>약 (10분 마다 진동)</item>
+        <item>중 (5분 마다 진동)</item>
+        <item>강 (1분 마다 진동)</item>
+    </string-array>
+
+    <string-array name="신용등급">
+        <item>신용등급</item>
+        <item>1-3 등급</item>
+        <item>4-6 등급</item>
+        <item>7-10 등급</item>
+        <item>모름</item>
+    </string-array>
+
+
+</resources>

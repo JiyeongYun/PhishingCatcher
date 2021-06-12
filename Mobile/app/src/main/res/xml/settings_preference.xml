@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true">
+
+
+    <PreferenceCategory
+        android:title="앱 설정"
+        app:iconSpaceReserved="false">
+
+<!--        <ListPreference-->
+<!--            android:defaultValue="강 (1분 마다 진동)"-->
+<!--            android:entries="@array/level"-->
+<!--            android:entryValues="@array/level"-->
+<!--            android:key="level_list"-->
+<!--            android:title="탐지 강도 설정"-->
+<!--            app:iconSpaceReserved="false" />-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            android:defaultValue="true"-->
+<!--            android:key="voice_alarm"-->
+<!--            android:title="경고음성 위험 알림"-->
+<!--            app:iconSpaceReserved="false" />-->
+
+<!--        <SwitchPreferenceCompat-->
+
+<!--            android:defaultValue="true"-->
+<!--            android:key="vibration_alarm"-->
+<!--            android:title="진동 알림 기능"-->
+<!--            app:iconSpaceReserved="false"-->
+<!--            tools:text="진동 알림 기능" />-->
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="권한 설정"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:enabled="true"
+            android:key="overlay"
+            android:selectable="false"
+            android:summary="ON"
+            android:title="다른 앱 위에 그리기"
+            app:iconSpaceReserved="false" />
+        <Preference
+            android:enabled="true"
+            android:key="battery"
+            android:selectable="false"
+            android:summary="ON"
+            android:title="배터리 사용량 최적화 제외"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="정보"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="callCenter"
+            android:title="고객센터"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="faqInfo"
+            android:title="FAQ"
+            app:iconSpaceReserved="false" />
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
